@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<th:block th:include="layout :: mainhead"></th:block>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<header th:insert="layout :: header"></header>
+	
+		<form  method="post" action="#" th:action="@{/car/add}" th:object="${carmodel}">
+  <div class="mb-3">
+  <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name" th:field="*{name}">
+  </div>
+  <div class="mb-3">
+   <label for="name" class="form-label">CarType</label>
+    <input type="text" class="form-control" id="Cartype" th:field="*{type}">
+  </div>
+  <div class="mb-3">
+      <label for="name" class="form-label">Price</label>
+    <input type="text" class="form-control" id="Cartype" th:field="*{price}">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+	<footer th:insert="layout :: footer"></footer>
+</body>
+</html>
